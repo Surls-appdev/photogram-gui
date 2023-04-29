@@ -16,6 +16,8 @@ class Photo < ApplicationRecord
   validates(:poster, { :presence => true })
 
   def poster
+    # this goes to the photo table, takes the owner id, and looks to the User table and finds the match, and returns the_user.
+
     my_owner_id = self.owner_id
 
     matching_users = User.where({ :id => my_owner_id })

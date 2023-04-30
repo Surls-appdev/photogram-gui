@@ -68,3 +68,18 @@
 <% end %>
 
 <h3>Add a new comment</h3>
+<hr>
+
+<form action="/add_comment/<%= @the_photo.id %>">
+      <label for="photo_number_box">Photo ID</label>
+      <input id="photo_number_box" type="text" name="query_photo" placeholder="Enter the Photo ID for the image..." value="<%= @the_photo.id %>">
+      
+      <label for="author_number_box">Author ID</label>
+      <input id="author_number_box" type="text" name="query_author" placeholder="" value="">
+
+      <label for="the_comment_box">Comment</label>
+      <textarea id="the_comment_box" name="query_comment" placeholder="Enter a comment..."></textarea>
+
+
+      <button>Add comment</button>
+    </form>
